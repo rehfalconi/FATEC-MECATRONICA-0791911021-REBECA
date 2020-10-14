@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+class Main {
+public static void main(String[] args) {
+  Scanner teclado = new Scanner(System.in);
+
+  System.out.println("Exercício 4!");
+
+  int  anos, ano, meses, dias;  
+
+  System.out.print("Digite o ano que você nasceu: ");
+ ano = teclado.nextInt();
+
+ anos = 2020 - ano;
+ meses = anos*12;
+ dias = anos*365;
+
+ System.out.println("Você tem: " +anos+ " anos, " +meses+ " meses, " +dias+ " dias de vida. ");
+
+}
+}
