@@ -4,7 +4,7 @@ class Main {
 public static void main(String[] args) {
   Scanner teclado = new Scanner(System.in);
 
-  System.out.println("Exercício 8!");
+  System.out.println("Exercício 5!");
 
   int  eleitores, vbrancos, vnulos, vvalidos, total;  
   double b, n, v;  
