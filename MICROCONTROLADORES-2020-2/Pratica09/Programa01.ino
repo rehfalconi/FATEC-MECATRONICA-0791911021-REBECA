@@ -14,19 +14,13 @@ const int ENTRADA_02 = D2;
 
 //Variáveis globais
 char msg[30];
-//Variável utilizada com o millis()
 unsigned long tempoAnterior;
 //Indica que a variável será utilizada dentro de uma interrupção
 volatile unsigned long total_de_pulsos = 0;
-//Variável utilizada para realizar debounce no botão
-volatile unsigned long tempoBotao;
 
 //Funções de interrupção - ISR
 void ICACHE_RAM_ATTR conta_pulsos(){
-  if(millis()-tempoBotao >= 30){
-    total_de_pulsos++;
-    tempoBotao = millis();
-  }
+  total_de_pulsos++;
 }
 
 void inicializa_hardware(){
@@ -54,8 +48,6 @@ void setup() {
   tempoAnterior = millis();
   //Zera o total de pulsos
   total_de_pulsos = 0;
-  //Guarda o tempo do acionamento do botão
-  tempoBotao = millis();
 }
 
 
